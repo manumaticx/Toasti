@@ -1,7 +1,0 @@
-".container": {
-	backgroundColor:"white",
-	layout: 'vertical'
-},
-"Button": {
-	top: '10dp'
-} 
