@@ -1,8 +1,0 @@
-<Alloy>
-	<Window class="container">
-		<Button onClick="simple">Simple</Button>
-		<Button onClick="confirm">Confirm</Button>
-		<Button onClick="alert">Alert</Button>
-		<Button onClick="info">Info</Button>
-	</Window>
-</Alloy>
