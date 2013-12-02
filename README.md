@@ -16,35 +16,32 @@ Alloy Widget for cross-platform Toast notifications.
 
 ### update config.json
 
-	```javascript
-	"dependencies": {
-	    "toasty":"1.1"
-	}
-	```
+```javascript
+"dependencies": {
+    "toasty":"1.1"
+}
+```
 
 ## Usage
 
 Create an instance of the widget ( global reference is recommeded: `Alloy.Globals.toasty` )
-
-    ```javascript
-	var toasty = Alloy.createWidget("toasty");
-    ```
+```javascript
+var toasty = Alloy.createWidget("toasty");
+```
 
 Show a simple toast message
-
-	```javascript
-	toasty.show("Hello World");
-    ```
+```javascript
+toasty.show("Hello World");
+```
 
 Use a title and type
-  
-	```javascript
-	toasty.show({
-	   title: 'Confirm',
-	   message: 'This is a confirmation.',
-	   type: 'confirm' // or: toasty.TYPE_CONFIRM
-	});
-    ```
+```javascript
+toasty.show({
+   title: 'Confirm',
+   message: 'This is a confirmation.',
+   type: 'confirm' // or: toasty.TYPE_CONFIRM
+});
+```
 
 ### Properties
 * `TYPE_CONFIRM`
