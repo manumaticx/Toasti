@@ -10,9 +10,11 @@ var colors = [
 // define toasty types
 var types = ['confirm', 'alert', 'info'];
 
-// assign title and message values
+// assign passed values
 $.title.text = args.title || '';
 $.message.text = args.message || '';
+$.toasty.width = args.width || '70%';
+$.toasty.height = args.height || '30%';
 
 // set backgroundColor according to type
 if ('undefined' !== typeof args.type) {

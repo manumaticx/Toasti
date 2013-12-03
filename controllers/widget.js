@@ -3,6 +3,8 @@ var args = arguments[0] || {},
     defaults = _.defaults(args, {
     	duration: 2000,
     	opacity: 0.8,
+    	width: '70%',
+    	height: '30%',
     	title: '',
     	message: ''
     }),

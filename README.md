@@ -59,6 +59,8 @@ toasty.show({
 		* type
 		* duration
 		* opacity
+		* width
+		* height
 	* you can pass a String instead of an Object
 	* __returns__ a reference to the toasty (Ti.UI.Window)
 

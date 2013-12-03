@@ -1,9 +1,7 @@
 "#toasty": {
     backgroundColor: '#000000',
     borderRadius: 10,
-    opacity: 0,
-    width: '70%',
-    height: '30%'
+    opacity: 0
 },
 "#toasty[platform=ios]":{
     navBarHidden: true
