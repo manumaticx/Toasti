@@ -66,7 +66,6 @@ toasty.configure(defaults);
 
 ### Methods
 * `show( properties )`
-
 	* _properties_ is an Object with these keys:
 		* title
 		* message
@@ -77,7 +76,7 @@ toasty.configure(defaults);
 		* height
 	* you can pass a String instead of an Object
 	* __returns__ a reference to the toasty (Ti.UI.Window)
-
+* `configure( properties )`
 
 ## Changelog
 
