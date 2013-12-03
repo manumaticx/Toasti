@@ -45,6 +45,20 @@ toasty.show({
 });
 ```
 
+Set the defaults
+```javascript
+var defaults = {
+   duration: 3000,
+   height: '20%'
+};
+
+// at creation
+var toasty = Alloy.createWidget("toasty", defaults);
+
+// after creation
+toasty.configure(defaults);
+```
+
 ### Properties
 * `TYPE_CONFIRM`
 * `TYPE_ALERT`

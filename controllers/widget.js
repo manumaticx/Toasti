@@ -56,6 +56,14 @@ function show(_args){
 	return toasty.getView();
 };
 
+/**
+ * configure the defaults
+ * @param {Object} _args
+ */
+function configure(_args){
+	defaults = _.defaults(_args, defaults);
+};
+
 // constants
 exports.TYPE_CONFIRM = 0;
 exports.TYPE_ALERT = 1;
@@ -63,3 +71,4 @@ exports.TYPE_INFO = 2;
 
 // methods
 exports.show = show;
+exports.configure = configure;
