@@ -10,9 +10,18 @@ var colors = [
 // define toasty types
 var types = ['confirm', 'alert', 'info'];
 
-// assign passed values
-$.title.text = args.title || '';
-$.message.text = args.message || '';
+// check if a custom view was passed
+if (_.has(args, "view")){
+    // replace our view with the custom view
+    $.toasty.remove($.centerWrapper);
+    $.toasty.add(args.view);
+}else{
+    // assign passed values
+    $.title.text = args.title || '';
+    $.message.text = args.message || '';    
+}
+
+// adjust dimensions
 $.toasty.width = args.width || '70%';
 $.toasty.height = args.height || '30%';
 
