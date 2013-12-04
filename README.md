@@ -2,7 +2,8 @@
 
 Alloy Widget for cross-platform Toast notifications.
 
-![toasty](http://i40.tinypic.com/2ut1102.png)
+![toasty](http://i40.tinypic.com/k981g3.png)
+![toasty](http://i44.tinypic.com/339hssl.png)
 
 ## Install
 
@@ -20,7 +21,7 @@ Alloy Widget for cross-platform Toast notifications.
 
 ```javascript
 "dependencies": {
-    "toasty":"1.1"
+    "toasty":"1.2"
 }
 ```
 
@@ -69,6 +70,7 @@ toasty.configure(defaults);
 	* _properties_ is an Object with these keys:
 		* title
 		* message
+		* view
 		* type
 		* duration
 		* opacity
@@ -80,6 +82,9 @@ toasty.configure(defaults);
 
 ## Changelog
 
+* __1.2__
+	* options for custom view, width and height
+	* method for configuring the defaults
 * __1.1__ 
 	* changed the API (create widget once, show multiple messages)
 	* queues up messages
