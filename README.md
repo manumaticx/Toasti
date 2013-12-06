@@ -2,9 +2,6 @@
 
 Alloy Widget for cross-platform Toast notifications.
 
-![toasty](http://i40.tinypic.com/k981g3.png)
-![toasty](http://i44.tinypic.com/339hssl.png)
-
 ## Install
 
 ### Download
