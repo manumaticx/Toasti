@@ -21,9 +21,11 @@ if (_.has(args, "view")){
     $.message.text = args.message || '';    
 }
 
-// adjust dimensions
-$.toasty.width = args.width || '70%';
-$.toasty.height = args.height || '30%';
+// adjust dimensions...
+$.toasty.width = args.width;
+$.toasty.height = args.height;
+// ..and other options
+$.toasty.borderRadius = args.borderRadius;
 
 // set backgroundColor according to type
 if ('undefined' !== typeof args.type) {

@@ -1,6 +1,5 @@
 "#toasty": {
     backgroundColor: '#000000',
-    borderRadius: 10,
     opacity: 0
 },
 "#toasty[platform=ios]":{
