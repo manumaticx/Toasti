@@ -34,59 +34,9 @@ Show a simple toast message
 toasty.show("Hello World");
 ```
 
-Use a title and type
-```javascript
-toasty.show({
-   title: 'Confirm',
-   message: 'This is a confirmation.',
-   type: 'confirm' // or: toasty.TYPE_CONFIRM
-});
-```
+You can find a more detailed documentation in the [wiki](https://github.com/manumaticx/toasty/wiki)
 
-Set the defaults
-```javascript
-var defaults = {
-   duration: 3000,
-   height: '20%'
-};
-
-// at creation
-var toasty = Alloy.createWidget("toasty", defaults);
-
-// after creation
-toasty.configure(defaults);
-```
-
-### Properties
-* `TYPE_CONFIRM`
-* `TYPE_ALERT`
-* `TYPE_INFO`
-
-### Methods
-* `show( properties )`
-	* _properties_ is an Object with these keys:
-		* title
-		* message
-		* view
-		* type
-		* duration
-		* opacity
-		* width
-		* height
-	* you can pass a String instead of an Object
-	* __returns__ a reference to the toasty (Ti.UI.Window)
-* `configure( properties )`
-
-## Changelog
-
-* __1.2__
-	* options for custom view, width and height
-	* method for configuring the defaults
-* __1.1__ 
-	* changed the API (create widget once, show multiple messages)
-	* queues up messages
-* __1.0__ 
-	* initial release
+#### [Changelog](https://github.com/manumaticx/toasty/wiki/Changelog)
 
 ## License
 
