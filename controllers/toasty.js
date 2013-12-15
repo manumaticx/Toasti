@@ -22,10 +22,17 @@ if (_.has(args, "view")){
 }
 
 // adjust dimensions...
-$.toasty.width = args.width;
+$.toasty.width  = args.width;
 $.toasty.height = args.height;
+
 // ..and other options
 $.toasty.borderRadius = args.borderRadius;
+
+// optional positioning options
+_.has(args, "top")    && $.toasty.setTop(args.top);
+_.has(args, "bottom") && $.toasty.setBottom(args.bottom);
+_.has(args, "left")   && $.toasty.setLeft(args.left);
+_.has(args, "right")  && $.toasty.setRight(args.right);
 
 // set backgroundColor according to type
 if ('undefined' !== typeof args.type) {
