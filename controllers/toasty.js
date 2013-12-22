@@ -37,11 +37,11 @@ _.has(args, "right")  && $.toasty.setRight(args.right);
 // set backgroundColor according to type
 if ('undefined' !== typeof args.type) {
 
-	if ('string' === typeof args.type) {
+	if ('string' === typeof args.type && types.indexOf(args.type) > -1) {
 		$.toasty.setBackgroundColor(colors[_.indexOf(types, args.type)]);
 	}
 
-	if ('number' === typeof args.type) {
+	if ('number' === typeof args.type && args.type in colors) {
 		$.toasty.setBackgroundColor(colors[args.type]);
 	}
 }
