@@ -4,6 +4,7 @@ var args = arguments[0] || {},
     	duration: 2000,
     	opacity: 0.8,
     	borderRadius: 10,
+    	animation: 'fade',
     	width: '70%',
     	height: '30%',
     	title: '',
@@ -69,6 +70,10 @@ function configure(_args){
 exports.TYPE_CONFIRM = 0;
 exports.TYPE_ALERT = 1;
 exports.TYPE_INFO = 2;
+exports.ANIMATION_FADE = 'fade';
+exports.ANIMATION_SLIDE_FROM_TOP = 'top';
+exports.ANIMATION_SLIDE_FROM_LEFT = 'left';
+exports.ANIMATION_ZOOM = 'zoom';
 
 // methods
 exports.show = show;

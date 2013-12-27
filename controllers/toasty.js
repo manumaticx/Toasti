@@ -47,21 +47,103 @@ if ('undefined' !== typeof args.type) {
 }
 
 // show animation
-var show = Ti.UI.createAnimation({
-	duration : 200,
-	opacity : args.opacity
-});
+var show = (function(animation){
+	var opts;
+	switch (animation){
+		case 'fade': // fade in
+			opts = {
+				duration : 200,
+				opacity : args.opacity
+			};
+			break;
+		case 'top': // slide from top
+			$.toasty.top = negate($.toasty.height, Ti.Platform.displayCaps.platformHeight);
+			$.toasty.opacity = args.opacity;
+			opts = {
+				duration : 200,
+				top: 0
+			};
+			break;
+		case 'left': // slide from left
+			opts = {
+				duration : 200,
+				opacity : args.opacity
+			};
+			break;
+		case 'zoom': // zoom in
+			opts = {
+				duration : 200,
+				opacity : args.opacity
+			};
+			break;
+		default:
+			opts: {};
+	}
+	return Ti.UI.createAnimation(opts);
+})(args.animation);
 
 // hide animation
-var hide = Ti.UI.createAnimation({
-	duration : 200,
-	opacity : 0
-});
+var hide = (function(animation){
+	var opts;
+	switch (animation){
+		case 'fade': // fade out
+			opts = {
+				duration : 200,
+				opacity : 0
+			};
+			break;
+		case 'top': // slide to top
+			opts = {
+				duration : 200,
+				top : negate($.toasty.height, Ti.Platform.displayCaps.platformHeight)
+			};
+			break;
+		case 'left': // slide to right
+			opts = {
+				duration : 200,
+				opacity : args.opacity
+			};
+			break;
+		case 'zoom': // zoom out
+			opts = {
+				duration : 200,
+				opacity : args.opacity
+			};
+			break;
+		default:
+			opts: {};
+	}
+	return Ti.UI.createAnimation(opts);
+})(args.animation);
 
 // close toasty window when hide animation has finished
-hide.addEventListener('complete', function() {
+hide.addEventListener('complete', onHideComplete);
+function onHideComplete(){
 	$.toasty.close();
-});
+	hide.removeEventListener('complete', onHideComplete);
+};
+
+// helper function to negate non-integer values 
+function negate(value, platformValue){
+	
+	if ('string' === typeof value){
+		if (value.match(/\%$/)){
+			// negate %-ages
+			return '-'+value;
+		}else if (value == 'FILL' || value == 'SIZE' || value == 'auto'){
+			// negate titanium keywords with platform values
+			var p = platformValue;
+			OS_ANDROID && (p /= Ti.Platform.displayCaps.logicalDensityFactor);
+			return 0 - p;
+		}else{
+			return 0;
+		}
+	}else if('number' === typeof value){
+		return 0 - value;
+	}else{
+		return 0;
+	}
+};
 
 // show
 exports.show = function() {
