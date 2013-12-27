@@ -65,16 +65,22 @@ var show = (function(animation){
 			};
 			break;
 		case 'left': // slide from left
+			$.toasty.left = negate($.toasty.width, Ti.Platform.displayCaps.platformWidth);
+			$.toasty.opacity = args.opacity;
 			opts = {
 				duration : 200,
-				opacity : args.opacity
+				left : 'auto'
 			};
 			break;
 		case 'zoom': // zoom in
+			$.toasty.transform = Ti.UI.create2DMatrix({
+				scale: 0
+			});
 			opts = {
-				duration : 200,
-				opacity : args.opacity
-			};
+		        opacity: args.opacity,
+		        transform: Ti.UI.create2DMatrix(),
+		        duration: 200
+		    };
 			break;
 		default:
 			opts: {};
@@ -101,13 +107,16 @@ var hide = (function(animation){
 		case 'left': // slide to right
 			opts = {
 				duration : 200,
-				opacity : args.opacity
+				left : '100%'
 			};
 			break;
 		case 'zoom': // zoom out
 			opts = {
 				duration : 200,
-				opacity : args.opacity
+				transform: Ti.UI.create2DMatrix({
+					scale: 0
+				}),
+				opacity : 0,
 			};
 			break;
 		default:
