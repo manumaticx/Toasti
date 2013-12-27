@@ -1,6 +1,6 @@
 # Toasty
 
-Alloy Widget for cross-platform Toast notifications.
+Alloy Widget for enhanced cross-platform Toast notifications.
 
 ## Install
 
@@ -18,9 +18,15 @@ Alloy Widget for cross-platform Toast notifications.
 
 ```javascript
 "dependencies": {
-    "toasty":"1.2"
+    "toasty":"1.3"
 }
 ```
+
+## Features
+* different types (backgroundColor): default, confirm, alert, info
+* multiple animations: fade, slide from top, slide from left, zoom in/out
+* queues up messages
+* very customizable: dimension, position, custom content view, etc.
 
 ## Usage
 
@@ -34,9 +40,10 @@ Show a simple toast message
 toasty.show("Hello World");
 ```
 
-You can find a more detailed documentation in the [wiki](https://github.com/manumaticx/toasty/wiki)
-
-#### [Changelog](https://github.com/manumaticx/toasty/wiki/Changelog)
+## More
+* [Documentation](https://github.com/manumaticx/toasty/wiki)
+* [Demo](https://github.com/manumaticx/toastyDemo)
+* [Changelog](https://github.com/manumaticx/toasty/wiki/Changelog)
 
 ## License
 

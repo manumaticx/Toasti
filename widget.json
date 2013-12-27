@@ -1,11 +1,11 @@
 {
 	"id": "toasty",
 	"name": "Toasty",
-	"description" : "Cross-platform Toast Notifications",
+	"description" : "enhanced Toast Notifications",
 	"author": "Manuel Lehner",
-	"version": "1.2",
+	"version": "1.3",
 	"copyright":"Copyright (c) 2013",
-	"license":"Public Domain",
+	"license":"Apache 2.0",
 	"tags":"notification, message, toast, error, confirm, feedback",
 	"platforms":"ios, android, mobileweb"
 }
