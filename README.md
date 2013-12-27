@@ -2,6 +2,8 @@
 
 Alloy Widget for enhanced cross-platform Toast notifications.
 
+![demo](https://raw.github.com/manumaticx/toastyDemo/master/demo.gif)
+
 ## Install
 
 ### Download
