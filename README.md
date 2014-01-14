@@ -6,6 +6,9 @@ Alloy Widget for enhanced cross-platform Toast notifications.
 
 ## Install
 
+### From [gittio](http://gitt.io/cli)
+`$ gittio install -g toasty`
+
 ### Download
 
 #### as Archive
