@@ -1,8 +1,6 @@
 "#toasty": {
     backgroundColor: '#000000',
-    opacity: 0
-},
-"#toasty[platform=ios]":{
+    opacity: 0,
     navBarHidden: true
 },
 "#centerWrapper":{
