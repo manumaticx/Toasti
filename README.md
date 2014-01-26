@@ -2,30 +2,15 @@
 
 Alloy Widget for enhanced cross-platform Toast notifications.
 
-![demo](https://raw.github.com/manumaticx/toastyDemo/master/demo.gif)
+![demo](https://raw2.github.com/manumaticx/demos/master/toasty/demo.gif)
 
 ## Install
 
-### From [gittio](http://gitt.io/cli)
+From [gittio](http://gitt.io/cli):
+
 `$ gittio install toasty`
 
-### Download
-
-#### as Archive
-* [download](https://github.com/manumaticx/toasty/releases) latest version as zip
-* unzip under `app/widgets/toasty`
-	
-#### as Git Submodule
-
-`$ git submodule add https://github.com/manumaticx/toasty.git app/widgets/toasty`
-
-### update config.json
-
-```javascript
-"dependencies": {
-    "toasty":"1.3"
-}
-```
+or [download](https://github.com/manumaticx/toasty/releases/latest)
 
 ## Features
 * different types (backgroundColor): default, confirm, alert, info
@@ -47,7 +32,7 @@ toasty.show("Hello World");
 
 ## More
 * [Documentation](https://github.com/manumaticx/toasty/wiki)
-* [Demo](https://github.com/manumaticx/toastyDemo)
+* [Demo](https://github.com/manumaticx/demos/tree/master/toasty)
 * [Changelog](https://github.com/manumaticx/toasty/wiki/Changelog)
 
 ## License
