@@ -49,6 +49,15 @@ if ('undefined' !== typeof args.type) {
 // show animation
 var show = (function(animation){
 	var opts;
+
+	if (OS_ANDROID){
+		opts = {
+			duration : 200,
+			opacity : args.opacity
+		};
+		return Ti.UI.createAnimation(opts);
+	}
+
 	switch (animation){
 		case 'fade': // fade in
 			opts = {
@@ -91,6 +100,15 @@ var show = (function(animation){
 // hide animation
 var hide = (function(animation){
 	var opts;
+
+	if (OS_ANDROID){
+		opts = {
+			duration : 200,
+			opacity : 0
+		};
+		return Ti.UI.createAnimation(opts);
+	}
+
 	switch (animation){
 		case 'fade': // fade out
 			opts = {
