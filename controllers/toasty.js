@@ -17,8 +17,8 @@ if (_.has(args, "view")){
     $.toasty.add(args.view);
 }else{
     // assign passed values
-    $.title.text = args.title || '';
-    $.message.text = args.message || '';    
+    _.has(args, "title") ? $.title.setText(args.title) : $.centerWrapper.remove($.title);
+    $.message.text = args.message;    
 }
 
 // adjust dimensions...

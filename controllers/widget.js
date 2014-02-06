@@ -7,7 +7,6 @@ var args = arguments[0] || {},
     	animation: 'fade',
     	width: '70%',
     	height: '30%',
-    	title: '',
     	message: ''
     }),
     toasty,
