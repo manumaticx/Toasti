@@ -1,6 +1,16 @@
 # Toasti [![Appcelerator Titanium](http://www-static.appcelerator.com/badges/alloy-git-badge-sq.png)](http://www.appcelerator.com/alloy/)
 
-Alloy Widget for enhanced cross-platform Toast notifications.
+> IMPORTANT:
+
+> This project is not longer maintained. Only iOS is supported.
+
+> Alternative choices:
+
+> * [nl.fokkezb.toast](http://gitt.io/component/nl.fokkezb.toast)
+> * [com.mcongrove.toast](http://gitt.io/component/com.mcongrove.toast)
+> * [com.caffeinalab.titanium.notifications](http://gitt.io/component/com.caffeinalab.titanium.notifications)
+
+Alloy Widget for enhanced Toast notifications for iOS.
 
 ![demo](http://s27.postimg.org/my6zqbpwj/demo.gif)
 
@@ -32,7 +42,6 @@ toasty.show("Hello World");
 
 ## More
 * [Documentation](https://github.com/manumaticx/toasti/wiki)
-* [Demo](https://github.com/manumaticx/demos/tree/master/toasty)
 * [Changelog](https://github.com/manumaticx/toasti/wiki/Changelog)
 
 ## License
