@@ -12,36 +12,40 @@ var args = arguments[0] || {},
     toasty,
     queue = [];
 
+!OS_IOS && Ti.API.error('only iOS is supported');
+
 /**
  * show a new toasty message
  * @param {Object} _args
  * @return {Ti.UI.Window}
  */
 function show(_args){
+    !OS_IOS && return;
+    
 	var args = _args || {};
-	
+
 	// catch if a string is passed instead of an object
 	if ('string' === typeof _args){
 		args = {
-			message: _args 
+			message: _args
 		};
 	}
-	
+
 	// if there's an active toasty, put this one into the queue
 	if (!!toasty){
 		queue.push(args);
 		return;
 	}
-	
+
 	// create a toatsy instance
     toasty = Widget.createController('toasty', _.defaults(args, defaults));
-    
+
     // listen to close event
     toasty.getView().addEventListener('close', function(){
-    	
+
     	// nulling out this one
     	toasty = null;
-    	
+
     	// check if other toasties waiting to show
     	if (queue.length > 0){
     		// show the next one
@@ -49,10 +53,10 @@ function show(_args){
     		queue.shift();
     	}
     });
-    
+
     // show it
 	toasty.show();
-	
+
 	// return a reference to the toasty window
 	return toasty.getView();
 };
